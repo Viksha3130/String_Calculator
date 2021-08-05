@@ -34,5 +34,11 @@ public class StringCalculatorTest {
 public final void newline() {
    Assert.assertEquals(13, StringCalculator.Add("1\n2,10"));
 }
+
+//Different Delimiter
+@Test
+public final void whenDelimiterIsSpecifiedThenItIsUsedToSeparateNumbers() {
+    Assert.assertEquals(8, StringCalculator.Add("//;\n2;5;1"));
+}
 }
  
