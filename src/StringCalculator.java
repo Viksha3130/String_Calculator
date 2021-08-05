@@ -24,8 +24,10 @@ public class StringCalculator {
 	        	int numberInt = Integer.parseInt(number.trim());
 	            if (numberInt < 0) {
 	                NegativeNumber.add(numberInt);
+	            } else if (numberInt <=1000) {
+	            	value += numberInt;
 	            }
-	            value += numberInt;
+	            
 	        }
 	    }
 	         

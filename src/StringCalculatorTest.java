@@ -53,5 +53,11 @@ public final void Negative_number_not_allowed() {
     Assert.assertNotNull(exception);
     Assert.assertEquals("Negatives not allowed: [-1,-3]",exception.getMessage());
 }
+
+//Number Bigger than 1000 not allowed
+@Test
+public final void Bigger_Number_than_1000_not_allowed() {
+	Assert.assertEquals(9+1000+200+500, StringCalculator.Add("9,1000,2000,200,5000,500"));
+}
 }
  
