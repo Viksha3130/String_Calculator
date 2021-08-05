@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class StringCalculator {
    public static int Add (String numbers) {
@@ -13,14 +15,24 @@ public class StringCalculator {
 	   private static int Add(final String numbers, final String delimiter) {
 	   int value = 0;
 	   String[] numberArray = numbers.split(delimiter);
+	   List NegativeNumber = new ArrayList();
 	   // if (numberArray.length > 2) {
 	   //     throw new RuntimeException("Up to 2 numbers separated by comma");
 	   // }
 	    for (String number : numberArray) {
 	        if (!number.trim().isEmpty()) { 
-	            value += Integer.parseInt(number);
+	        	int numberInt = Integer.parseInt(number.trim());
+	            if (numberInt < 0) {
+	                NegativeNumber.add(numberInt);
+	            }
+	            value += numberInt;
 	        }
 	    }
+	         
+	    if (NegativeNumber.size() < 0) {
+	        throw new RuntimeException("Negative number not allowed: " + NegativeNumber.toString());
+	    }
+	    
 	    return value;
 	   
    }

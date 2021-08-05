@@ -40,5 +40,18 @@ public final void newline() {
 public final void whenDelimiterIsSpecifiedThenItIsUsedToSeparateNumbers() {
     Assert.assertEquals(8, StringCalculator.Add("//;\n2;5;1"));
 }
+
+//Negative number not allowed
+@Test
+public final void Negative_number_not_allowed() {
+    RuntimeException exception = null;
+    try {
+        StringCalculator.Add("2,-1,6,5,-3");
+    } catch (RuntimeException e) {
+        exception = e;
+    }
+    Assert.assertNotNull(exception);
+    Assert.assertEquals("Negatives not allowed: [-1,-3]",exception.getMessage());
+}
 }
  
