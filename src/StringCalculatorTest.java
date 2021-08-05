@@ -22,5 +22,11 @@ public class StringCalculatorTest {
  public final void return_sum_of_numbers() {
      Assert.assertEquals(16, StringCalculator.Add("10,6"));
  }
+ 
+ //Unknown amount of numbers
+ @Test
+ public final void unknown_numbers() {
+     Assert.assertEquals(35, StringCalculator.Add("4,7,8,9,2,5"));
+ }
 }
  
