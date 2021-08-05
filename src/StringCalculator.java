@@ -2,7 +2,7 @@
 public class StringCalculator {
    public static int Add (String numbers) {
 	   int value = 0;
-	   String[] numberArray = numbers.split(",");
+	   String[] numberArray = numbers.split(",|\n");
 	   // if (numberArray.length > 2) {
 	   //     throw new RuntimeException("Up to 2 numbers separated by comma");
 	   // }

@@ -28,5 +28,11 @@ public class StringCalculatorTest {
  public final void unknown_numbers() {
      Assert.assertEquals(35, StringCalculator.Add("4,7,8,9,2,5"));
  }
+ 
+//new line between numbers
+@Test
+public final void newline() {
+   Assert.assertEquals(13, StringCalculator.Add("1\n2,10"));
+}
 }
  
